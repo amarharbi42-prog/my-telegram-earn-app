@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<'home' | 'tasks' | 'invite' | 'withdraw'>('home');
@@ -24,7 +24,6 @@ export function App() {
       direction: 'rtl',
       paddingBottom: '80px'
     }}>
-      {/* الرأس */}
       <div style={{
         padding: '20px',
         textAlign: 'center',
@@ -47,7 +46,6 @@ export function App() {
         </div>
       </div>
 
-      {/* المحتوى */}
       <div style={{ padding: '16px' }}>
         {activeTab === 'home' && (
           <div>
@@ -120,7 +118,7 @@ export function App() {
                   disabled={task.done}
                   style={{
                     backgroundColor: task.done ? '#334155' : '#eab308',
-                    color: task.done ? '#0f172a' : '#0f172a',
+                    color: task.done ? '#94a3b8' : '#0f172a',
                     border: 'none',
                     padding: '8px 14px',
                     borderRadius: '8px',
@@ -213,7 +211,6 @@ export function App() {
         )}
       </div>
 
-      {/* شريط التنقل السفلي */}
       <div style={{
         position: 'fixed',
         bottom: 0,
