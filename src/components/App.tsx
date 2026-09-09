@@ -47,7 +47,7 @@ export function App() {
         </div>
       </div>
 
-      {/* المحتوى الرئيسي حسب التبويب */}
+      {/* المحتوى */}
       <div style={{ padding: '16px' }}>
         {activeTab === 'home' && (
           <div>
@@ -64,12 +64,7 @@ export function App() {
               </p>
             </div>
 
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '12px',
-              marginTop: '12px'
-            }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '12px' }}>
               <button
                 onClick={() => setActiveTab('tasks')}
                 style={{
@@ -125,7 +120,7 @@ export function App() {
                   disabled={task.done}
                   style={{
                     backgroundColor: task.done ? '#334155' : '#eab308',
-                    color: task.done ? '#94a3b8' : '#0f172a',
+                    color: task.done ? '#0f172a' : '#0f172a',
                     border: 'none',
                     padding: '8px 14px',
                     borderRadius: '8px',
@@ -218,7 +213,7 @@ export function App() {
         )}
       </div>
 
-      {/* الشريط السفلي للتنقل */}
+      {/* شريط التنقل السفلي */}
       <div style={{
         position: 'fixed',
         bottom: 0,
